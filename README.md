@@ -72,33 +72,33 @@ go build -o chrome-utls-gen .
 
 ```bash
 # Generate template for latest Chrome Stable
-./chrome-utls-gen generate
+chrome-utls-gen generate
 
 # Generate for specific Chrome version
-./chrome-utls-gen generate --version 120.0.6099.109
+chrome-utls-gen generate --version 120.0.6099.109
 
 # Generate with custom output path
-./chrome-utls-gen generate --output ./templates/
+chrome-utls-gen generate --output ./templates/
 ```
 
 ### Self-Test
 
 ```bash
 # Test generated template against Chrome
-./chrome-utls-gen test --template ./templates/chrome-120.0.6099.109.json
+chrome-utls-gen test --template ./templates/chrome-120.0.6099.109.json
 
 # Test with live Chrome instance
-./chrome-utls-gen test --live --chrome-path /path/to/chrome
+chrome-utls-gen test --live --chrome-path /path/to/chrome
 ```
 
 ### Monitor for Updates
 
 ```bash
 # Start monitoring for new Chrome releases
-./chrome-utls-gen monitor --interval 1h
+chrome-utls-gen monitor --interval 1h
 
 # Auto-generate templates on new releases
-./chrome-utls-gen monitor --auto-generate
+chrome-utls-gen monitor --auto-generate
 ```
 
 ## Template Format
