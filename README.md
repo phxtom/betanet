@@ -55,7 +55,7 @@ This tool generates deterministic ClientHello templates that match Chrome Stable
 ## Installation
 
 ```
-# Download Zip from GitHub Repo
+Download Zip from GitHub Repo
 
 ```
 
