@@ -1,6 +1,6 @@
 # Chrome-Stable uTLS Template Generator
 
-A utility that produces exact TLS handshake bytes Chrome Stable sends, enabling Betanet traffic to blend in with normal web browsing.
+A program that produces exact TLS handshake bytes Chrome Stable sends, enabling Betanet traffic to blend in with normal web browsing.
 
 ## Overview
 
