@@ -1,7 +1,12 @@
-git remote add origin https://github.com/phxtom/betanet.git
-git push -u origin c-library
+git init
 
-git checkout -b c-library
+git add .
+
+git remote add origin https://github.com/phxtom/betanet.gi
+
+git checkout -b c-library=
+
+git push -u origin c-library
 
 git add .
 git commit -m "Add initial c-library code"
