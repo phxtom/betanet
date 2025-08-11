@@ -30,7 +30,7 @@ This guide will help you install and set up the Chrome-Stable uTLS Template Gene
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/betanet/chrome-utls-template-generator.git
+   git clone https://github.com/phxtom/betanet/edit/chrome-stable-utls
    cd chrome-utls-template-generator
    ```
 
