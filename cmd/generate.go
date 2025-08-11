@@ -87,7 +87,7 @@ func runGenerate(cmd *cobra.Command, args []string) error {
 		Timestamp: time.Now().UTC().Format(time.RFC3339),
 	}
 
-	// Calculate fingerprints
+	// ClientHello stuff (i stayed up all night fixing this one goddamn bug but it works now yippee)
 	clientHelloBytes, err := template.GenerateClientHello(tmpl)
 	if err != nil {
 		return fmt.Errorf("failed to generate ClientHello bytes: %w", err)
