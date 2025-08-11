@@ -1,0 +1,200 @@
+# Chrome-Stable uTLS Template Generator Configuration
+# Copy this file to ~/.chrome-utls-gen.yaml and modify as needed
+
+# Application settings
+app:
+  name: "chrome-utls-gen"
+  version: "1.0.0"
+  log_level: "info"  # debug, info, warn, error
+  verbose: false
+
+# Chrome version detection
+chrome:
+  # Sources to check for latest version (in order of preference)
+  version_sources:
+    - "omaha_proxy"      # Google's Omaha Proxy
+    - "chrome_releases"  # Chrome Releases blog
+    - "version_api"      # Chrome Version API
+  
+  # Default version if detection fails
+  default_version: "120.0.6099.109"
+  
+  # Version check interval (for monitoring)
+  check_interval: "1h"
+  
+  # Auto-update settings
+  auto_update:
+    enabled: false
+    check_on_startup: true
+    notify_on_new_version: true
+
+# Template generation
+template:
+  # Output directory for generated templates
+  output_dir: "./templates"
+  
+  # Template format settings
+  format:
+    include_metadata: true
+    include_fingerprints: true
+    pretty_print: true
+  
+  # Chrome version support
+  supported_versions:
+    - "120"  # Chrome 120.x.x.x
+    - "119"  # Chrome 119.x.x.x
+    - "118"  # Chrome 118.x.x.x
+  
+  # Default template settings
+  defaults:
+    tls_version: "1.2"
+    include_all_extensions: true
+    randomize_session_id: true
+    randomize_random: true
+
+# Fingerprint calculation
+fingerprint:
+  # JA3 settings
+  ja3:
+    enabled: true
+    include_hash: true
+  
+  # JA4 settings
+  ja4:
+    enabled: true
+    include_hash: true
+    detailed_format: true
+
+# Testing settings
+test:
+  # Self-test configuration
+  self_test:
+    enabled: true
+    validate_fingerprints: true
+    check_template_integrity: true
+  
+  # Live Chrome testing
+  live_test:
+    enabled: false
+    chrome_path: ""  # Auto-detect if empty
+    timeout: "30s"
+    retry_count: 3
+  
+  # Server testing
+  server_test:
+    enabled: false
+    server_address: "localhost:8443"
+    timeout: "10s"
+    verify_ssl: false
+
+# Monitoring settings
+monitor:
+  # Auto-monitoring for new versions
+  enabled: false
+  interval: "1h"
+  auto_generate: false
+  
+  # Notification settings
+  notifications:
+    email: false
+    webhook: false
+    webhook_url: ""
+  
+  # Logging
+  log_new_versions: true
+  log_generation_events: true
+
+# Network settings
+network:
+  # HTTP client settings
+  http:
+    timeout: "30s"
+    user_agent: "Chrome-UTLS-Generator/1.0.0"
+    retry_count: 3
+    retry_delay: "1s"
+  
+  # Proxy settings (if needed)
+  proxy:
+    enabled: false
+    http_proxy: ""
+    https_proxy: ""
+    no_proxy: "localhost,127.0.0.1"
+
+# Security settings
+security:
+  # TLS settings
+  tls:
+    min_version: "1.2"
+    max_version: "1.3"
+    insecure_skip_verify: false
+  
+  # Certificate validation
+  cert_validation:
+    enabled: true
+    check_revocation: true
+  
+  # Rate limiting
+  rate_limit:
+    enabled: true
+    requests_per_minute: 60
+    burst_size: 10
+
+# Logging configuration
+logging:
+  # Log file settings
+  file:
+    enabled: true
+    path: "./logs/chrome-utls-gen.log"
+    max_size: "10MB"
+    max_age: "30d"
+    max_backups: 5
+  
+  # Console logging
+  console:
+    enabled: true
+    color: true
+  
+  # Log levels
+  levels:
+    default: "info"
+    chrome: "debug"
+    template: "debug"
+    fingerprint: "debug"
+    test: "debug"
+
+# Development settings
+development:
+  # Debug mode
+  debug: false
+  
+  # Profiling
+  profiling:
+    enabled: false
+    cpu_profile: ""
+    memory_profile: ""
+  
+  # Testing
+  testing:
+    mock_chrome_responses: false
+    skip_network_calls: false
+    test_data_dir: "./testdata"
+
+# Betanet integration
+betanet:
+  # HTX compatibility
+  htx:
+    enabled: true
+    origin_mirroring: true
+    auto_calibration: true
+  
+  # L2 cover transport
+  l2:
+    enabled: true
+    tls_1_3_support: true
+    hybrid_pq_support: false  # Enable when X25519-Kyber768 is required
+  
+  # Template compatibility
+  template_compatibility:
+    utls_compatible: true
+    deterministic: true
+    reproducible: true
