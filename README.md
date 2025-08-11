@@ -2,6 +2,29 @@
 
 A program that produces exact TLS handshake bytes Chrome Stable sends, enabling Betanet traffic to blend in with normal web browsing.
 
+## Quick Command Reference
+
+### Essential Commands:
+```bash
+# Generate a new template
+chrome-utls-gen.exe generate --version 120.0.6099.109 --force
+
+# Test an existing template
+chrome-utls-gen.exe test --template templates\chrome-120.0.6099.109.json
+
+# Monitor for new Chrome versions
+chrome-utls-gen.exe monitor --interval 1h --auto-generate
+
+# Get help
+chrome-utls-gen.exe --help
+```
+
+### Common Options:
+- `--version` - Specify Chrome version (default: latest)
+- `--force` - Overwrite existing template
+- `--output` - Specify output directory
+- `--verbose` - Show detailed output
+
 ## Overview
 
 This tool generates deterministic ClientHello templates that match Chrome Stable's TLS fingerprint, making it impossible for deep-packet inspectors to distinguish Betanet traffic from legitimate Chrome browsing.
