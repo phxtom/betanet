@@ -1,6 +1,6 @@
 # Chrome-Stable uTLS Template Generator - User Tutorial
 
-## 🚀 Quick Command Reference
+## Quick Command Reference
 
 ### Essential Commands:
 ```bash
@@ -25,11 +25,11 @@ chrome-utls-gen.exe --help
 
 ---
 
-## 🎯 What is this tool?
+## What is this tool?
 
 The Chrome-Stable uTLS Template Generator is a utility that creates **exact TLS handshake templates** that match Chrome Stable's fingerprint. This enables network traffic to blend in with normal web browsing, making it impossible for deep-packet inspectors to distinguish it from legitimate Chrome traffic.
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
 ### Prerequisites
 - Windows, macOS, or Linux
@@ -41,7 +41,7 @@ The Chrome-Stable uTLS Template Generator is a utility that creates **exact TLS 
 2. **Place it** in a folder of your choice
 3. **That's it!** No installation needed
 
-## 📋 How to Use the Tool
+## How to Use the Tool
 
 ### Method 1: Command Prompt (Recommended)
 
@@ -55,7 +55,7 @@ The Chrome-Stable uTLS Template Generator is a utility that creates **exact TLS 
 2. **Follow the prompts** to enter commands
 3. **The window will stay open** for you to see results
 
-## 🔧 Available Commands
+## Available Commands
 
 ### 1. Get Help
 ```bash
@@ -68,9 +68,9 @@ Shows all available commands and options.
 chrome-utls-gen.exe test --template templates\chrome-120.0.6099.109.json
 ```
 Tests a pre-generated template and shows:
-- ✅ JA3 fingerprint match
-- ✅ JA4 fingerprint match  
-- ✅ Server connection test
+- JA3 fingerprint match
+- JA4 fingerprint match  
+- Server connection test
 
 **Expected Output:**
 ```
@@ -165,7 +165,7 @@ chrome-utls-gen.exe monitor --help
 - **Format:** Human-readable string with MD5 hash
 - **Example:** `t14339_d0_h0_c0_e256-1-8448-21760-35072-48384-61696_g_p_a_r_u_80173352edaf4b6000f80bc3421451bd`
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -197,7 +197,7 @@ chrome-utls-gen.exe [command] --help
 chrome-utls-gen.exe [command] --verbose
 ```
 
-## 🎯 Use Cases
+## Use Cases
 
 ### 1. Network Traffic Obfuscation
 Generate templates to make your traffic look like Chrome browsing.
@@ -211,14 +211,14 @@ Study TLS fingerprinting and browser behavior.
 ### 4. Betanet Integration
 Use with Betanet network for L2 cover transport requirements.
 
-## 🔒 Security Considerations
+## Security Considerations
 
 - **Templates are deterministic** - same input produces same output
 - **No personal data** is collected or transmitted
 - **Internet access** only needed for Chrome version detection
 - **Local operation** - all processing happens on your machine
 
-## 📚 Advanced Usage
+## Advanced Usage
 
 ### Custom Configuration
 Create a `config.yaml` file for custom settings:
@@ -248,7 +248,7 @@ The generated templates can be used with:
 - Network analysis tools
 - Betanet clients
 
-## 🆘 Support
+## Support
 
 ### Documentation
 - **README.md** - Project overview
@@ -278,14 +278,12 @@ The generated templates can be used with:
    └── INSTRUCTIONS.md
    ```
 
-## 🎉 Success Indicators
+## Success Indicators
 
 You know the tool is working correctly when:
-- ✅ `test` command shows "JA3 Match: true" and "JA4 Match: true"
-- ✅ `--help` commands show proper documentation
-- ✅ Template files are generated in JSON format
-- ✅ No error messages appear during testing
+- `test` command shows "JA3 Match: true" and "JA4 Match: true"
+- `--help` commands show proper documentation
+- Template files are generated in JSON format
+- No error messages appear during testing
 
 ---
-
-**Happy fingerprinting! 🚀**
