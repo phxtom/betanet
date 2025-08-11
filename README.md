@@ -33,7 +33,7 @@ This tool generates deterministic ClientHello templates that match Chrome Stable
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/phxtom/betanet/blob/chrome-stable-utls/README.md
 cd chrome-stable-utls-template-generator
 
 # Install dependencies
