@@ -1,0 +1,12 @@
+git remote add origin https://github.com/phxtom/betanet.git
+git push -u origin c-library
+
+git checkout -b c-library
+
+git add .
+git commit -m "Add initial c-library code"
+
+git push origin c-library
+
+git checkout main   # switch back to main or another branch
+git branch -D c-library
