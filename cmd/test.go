@@ -203,3 +203,5 @@ func captureChromeClientHello(chromePath, serverAddr string) ([]byte, error) {
 	// For now, return a placeholder
 	return []byte{}, fmt.Errorf("Chrome capture not implemented")
 }
+
+// god fucking dammit i burnt my quesadilla
