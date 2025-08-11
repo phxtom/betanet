@@ -54,16 +54,27 @@ This tool generates deterministic ClientHello templates that match Chrome Stable
 
 ## Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/phxtom/betanet/blob/chrome-stable-utls/README.md
-cd chrome-stable-utls-template-generator
+### Required Software
 
-# Install dependencies
-go mod download
+1. **Go 1.21 or later**
+   - Download from: https://golang.org/dl/
+   - Verify installation: `go version`
 
-# Build the project
-go build -o chrome-utls-gen .
+2. **Git**
+   - Download from: https://git-scm.com/downloads
+   - Verify installation: `git --version`
+
+3. **Chrome/Chromium Browser** (for testing)
+   - Download from: https://www.google.com/chrome/
+   - Or Chromium: https://www.chromium.org/getting-involved/download-chromium
+
+### Optional Software
+
+- **Docker** (for containerized deployment)
+- **Make** (for using the Makefile)
+- **golangci-lint** (for code linting)
+
+
 ```
 
 ## Usage
